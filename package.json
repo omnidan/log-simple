@@ -1,0 +1,30 @@
+{
+  "name": "log-simple",
+  "version": "0.1.0",
+  "description": "Super Simple JavaScript Logging based on console.log with unix terminal colors and iso timestamps",
+  "main": "log-simple.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/omnidan/log-simple.git"
+  },
+  "keywords": [
+    "log",
+    "simple",
+    "console.log",
+    "unix",
+    "terminal",
+    "color",
+    "colors",
+    "iso",
+    "timestamp"
+  ],
+  "author": "Daniel Bugl <daniel.bugl@touchlay.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/omnidan/log-simple/issues"
+  },
+  "homepage": "https://github.com/omnidan/log-simple"
+}
