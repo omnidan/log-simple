@@ -28,9 +28,13 @@ log.info("Hello World!");
 You don't need to specify a component name (only recommended when you have a
 small, single file project):
 ```
-var log = require('log-simple');
+var log = require('log-simple')({init: false});
 log.info("Hello World!");
 ```
+
+*Note*: If you specify an object as the first argument, it's interpreted as the
+config, not the component name. I'm setting init to false here, because we don't
+ need to see the init message if we only have one component.
 
 
 Configuration
@@ -67,7 +71,7 @@ Logging objects
 log-simple is basically a wrapper for `console.log`. This means you can use it
 just like `console.log`. To log an object, simply do:
 ```
-var log = require('log-simple');
+var log = require('log-simple')({init: false});
 var test = {hello: 'world'};
 log.debug('Testing object logging', test);
 ```

@@ -1,4 +1,4 @@
-// log-simple v0.1.1 - Super Simple JavaScript Logging
+// log-simple v0.1.2 - Super Simple JavaScript Logging
 
 /* TODO
  * Write tests
@@ -19,11 +19,12 @@ function Logs(component, config) {
 
   // config
   if (config) {
-    if (config.debug) this.setDebug(config.debug);
-    if (config.time) this.setTime(config.time);
-    if (config.init) init = !!config.init;
+    if (config.hasOwnProperty('debug')) this.setDebug(config.debug);
+    if (config.hasOwnProperty('time')) this.setTime(config.time);
+    if (config.hasOwnProperty('init')) init = !!config.init;
   }
 
+  // show init message
   if (init) this.debug('init');
 }
 
@@ -38,9 +39,11 @@ Logs.prototype.setTime = function setTime(value) {
 
 // internal functions
 Logs.prototype._component = function _component(args) {
-  var append_space = "";
-  for (var i=0; i < (8 - this.component.length); i++) append_space += " ";
-  if (this.component) args.unshift("[" + this.component + append_space + "]");
+  if (this.component) {
+    var append_space = "";
+    for (var i=0; i < (8 - this.component.length); i++) append_space += " ";
+    args.unshift("[" + this.component + append_space + "]");
+  }
   return args;
 };
 
@@ -109,5 +112,8 @@ Logs.prototype.d = Logs.prototype.debug;
 
 // export Logs object constructor
 module.exports = function initLogs(component, config) {
-  return new Logs(component, config);
+  if (typeof component == "string")
+    return new Logs(component, config);
+  else
+    return new Logs(undefined, component);
 };
