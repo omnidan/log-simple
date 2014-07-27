@@ -1,4 +1,4 @@
-// log-simple v0.1.0 - Super Simple JavaScript Logging
+// log-simple v0.1.1 - Super Simple JavaScript Logging
 
 /* TODO
  * Write tests
