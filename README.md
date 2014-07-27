@@ -6,6 +6,8 @@ and iso timestamps_
 
 _No external dependencies, super lightweight!_
 
+![log-simple example](http://i.imgur.com/S6m68K6.png) 
+
 
 Installation
 ------------
