@@ -2,7 +2,6 @@
 
 /* TODO
  * Write tests
- * Write README.md
  * Write examples
  * More configuration
  * More log levels
