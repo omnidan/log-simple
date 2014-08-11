@@ -1,6 +1,6 @@
 {
   "name": "log-simple",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Super Simple JavaScript Logging based on console.log with unix terminal colors and iso timestamps",
   "main": "log-simple.js",
   "scripts": {

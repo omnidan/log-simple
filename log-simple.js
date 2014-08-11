@@ -1,4 +1,4 @@
-// log-simple v0.1.2 - Super Simple JavaScript Logging
+// log-simple v0.1.3 - Super Simple JavaScript Logging
 
 /* TODO
  * Write tests
@@ -15,7 +15,7 @@ function Logs(component, config) {
   // default values
   this.DEBUG = true;
   this.TIME = true;
-  var init = true;
+  var init = false;
 
   // config
   if (config) {
