@@ -10,7 +10,9 @@
 
 function Logs(component, config) {
   // set component name
-  if (component) this.component = component;
+  if (component) {
+    this.component = component;
+  }
 
   // default values
   this.DEBUG = true;
@@ -19,13 +21,21 @@ function Logs(component, config) {
 
   // config
   if (config) {
-    if (config.hasOwnProperty('debug')) this.setDebug(config.debug);
-    if (config.hasOwnProperty('time')) this.setTime(config.time);
-    if (config.hasOwnProperty('init')) init = !!config.init;
+    if (config.hasOwnProperty('debug')) {
+      this.setDebug(config.debug);
+    }
+    if (config.hasOwnProperty('time')) {
+      this.setTime(config.time);
+    }
+    if (config.hasOwnProperty('init')) {
+      init = !!config.init;
+    }
   }
 
   // show init message
-  if (init) this.debug('init');
+  if (init) {
+    this.debug('init');
+  }
 }
 
 // configuration functions
@@ -41,14 +51,18 @@ Logs.prototype.setTime = function setTime(value) {
 Logs.prototype._component = function _component(args) {
   if (this.component) {
     var append_space = "";
-    for (var i=0; i < (8 - this.component.length); i++) append_space += " ";
+    for (var i=0; i < (10 - this.component.length); i++) {
+      append_space += " ";
+    }
     args.unshift("[" + this.component + append_space + "]");
   }
   return args;
 };
 
 Logs.prototype._time = function _time(args) {
-  if (this.TIME) args.unshift("[" + new Date().toISOString() + "]");
+  if (this.TIME) {
+    args.unshift("[" + new Date().toISOString() + "]");
+  }
   return args;
 };
 
@@ -112,8 +126,9 @@ Logs.prototype.d = Logs.prototype.debug;
 
 // export Logs object constructor
 module.exports = function initLogs(component, config) {
-  if (typeof component == "string")
+  if (typeof component === "string") {
     return new Logs(component, config);
-  else
+  } else {
     return new Logs(undefined, component);
+  }
 };
