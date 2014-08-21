@@ -30,7 +30,7 @@ log.info("Hello World!");
 You don't need to specify a component name (only recommended when you have a
 small, single file project):
 ```
-var log = require('log-simple')({init: false});
+var log = require('log-simple')();
 log.info("Hello World!");
 ```
 
@@ -48,7 +48,7 @@ default values. This should be self-explanatory:
 var log = require('log-simple')('component-name', {
     debug: true, // show debug messages
     time: true, // show time
-    init: true // show component init message
+    init: false // show component init message
   });
 ```
 
