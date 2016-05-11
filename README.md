@@ -1,6 +1,8 @@
 log-simple
 ==========
 
+:construction: **I do not maintain this project anymore. Feel free to try using it (although I cannot guarantee it works), send me pull requests, fork or get in contact if you want to take it over. I personally use [debug-dude](https://github.com/ggarek/debug-dude) now.**
+
 _Super Simple JavaScript Logging based on console.log with unix terminal colors
 and iso timestamps_
 
